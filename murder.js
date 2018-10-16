@@ -201,3 +201,6 @@ const declareMurderer = function() {
 
 const verdict = declareMurderer();
 console.log(verdict);
+
+// The verdict is:
+// Professor Plum is set as the murderer. This then changes to Mrs Peacock if it was Plum. This is apparently wrong and I don't know why the if statement fails.
