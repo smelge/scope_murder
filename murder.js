@@ -71,48 +71,48 @@
 
 // Episode 5
 
-const scenario = {
-  murderer: 'Miss Scarlet',
-  room: 'Kitchen',
-  weapon: 'Candle Stick'
-};
+// const scenario = {
+//   murderer: 'Miss Scarlet',
+//   room: 'Kitchen',
+//   weapon: 'Candle Stick'
+// };
+//
+// const changeWeapon = function(newWeapon) {
+//   scenario.weapon = newWeapon;
+// }
+//
+// const declareWeapon = function() {
+//   return `The weapon is the ${scenario.weapon}.`;
+// }
+//
+// changeWeapon('Revolver');
+// const verdict = declareWeapon();
+// console.log(verdict);
 
-const changeWeapon = function(newWeapon) {
-  scenario.weapon = newWeapon;
+// Verdict is Revolver. The candlestick is set up, and both functions are ignored until called. The weapon is changed to revolver then declared.
+
+// Episode 6
+
+let murderer = 'Colonel Mustard';
+
+const changeMurderer = function() {
+  murderer = 'Mr. Green';
+
+  const plotTwist = function() {
+    murderer = 'Mrs. White';
+  }
+
+  plotTwist();
 }
 
-const declareWeapon = function() {
-  return `The weapon is the ${scenario.weapon}.`;
+const declareMurderer = function () {
+  return `The murderer is ${murderer}.`;
 }
 
-changeWeapon('Revolver');
-const verdict = declareWeapon();
+changeMurderer();
+const verdict = declareMurderer();
 console.log(verdict);
 
-
-
-// // Episode 6
-//
-// let murderer = 'Colonel Mustard';
-//
-// const changeMurderer = function() {
-//   murderer = 'Mr. Green';
-//
-//   const plotTwist = function() {
-//     murderer = 'Mrs. White';
-//   }
-//
-//   plotTwist();
-// }
-//
-// const declareMurderer = function () {
-//   return `The murderer is ${murderer}.`;
-// }
-//
-// changeMurderer();
-// const verdict = declareMurderer();
-// console.log(verdict);
-//
 // // Episode 7
 //
 // let murderer = 'Professor Plum';
