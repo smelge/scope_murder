@@ -93,30 +93,30 @@
 
 // Episode 6
 
-let murderer = 'Colonel Mustard';
-
-const changeMurderer = function() {
-  murderer = 'Mr. Green';
-
-  const plotTwist = function() {
-    murderer = 'Mrs. White';
-  }
-
-  plotTwist();
-}
-
-const declareMurderer = function () {
-  return `The murderer is ${murderer}.`;
-}
-
-changeMurderer();
-const verdict = declareMurderer();
-console.log(verdict);
+// let murderer = 'Colonel Mustard';
+//
+// const changeMurderer = function() {
+//   murderer = 'Mr. Green';
+//
+//   const plotTwist = function() {
+//     murderer = 'Mrs. White';
+//   }
+//
+//   plotTwist();
+// }
+//
+// const declareMurderer = function () {
+//   return `The murderer is ${murderer}.`;
+// }
+//
+// changeMurderer();
+// const verdict = declareMurderer();
+// console.log(verdict);
 
 // Result is: Mrs White.
 // Colonel Mustard starts as the murderer, but is changed to Mr Green. However the plottwist changes it to Mrs White who is then declared the murderer.
 
-// // Episode 7
+// Episode 7
 //
 // let murderer = 'Professor Plum';
 //
@@ -143,44 +143,47 @@ console.log(verdict);
 // changeMurderer();
 // const verdict = declareMurderer();
 // console.log(verdict);
-//
-// // Episode 8
-//
-// const scenario = {
-//   murderer: 'Mrs. Peacock',
-//   room: 'Conservatory',
-//   weapon: 'Lead Pipe'
-// };
-//
-// const changeScenario = function() {
-//   scenario.murderer = 'Mrs. Peacock';
-//   scenario.room = 'Dining Room';
-//
-//   const plotTwist = function(room) {
-//     if (scenario.room === room) {
-//       scenario.murderer = 'Colonel Mustard';
-//     }
-//
-//     const unexpectedOutcome = function(murderer) {
-//       if (scenario.murderer === murderer) {
-//         scenario.weapon = 'Candle Stick';
-//       }
-//     }
-//
-//     unexpectedOutcome('Colonel Mustard');
-//   }
-//
-//   plotTwist('Dining Room');
-// }
-//
-// const declareWeapon = function() {
-//   return `The weapon is ${scenario.weapon}.`
-// }
-//
-// changeScenario();
-// const verdict = declareWeapon();
-// console.log(verdict);
-//
+
+// Result is: Mr Green
+// Professor Plum is the original murderer. changeMurderer switches it to Mr Green, but the plotTwist changes it to Colonel Mustard, which activates the unexpectedOutcome, giving Miss Scarlet. This doesn't matter, because Mr Green was set as a constant, so cannot be changed.
+
+// Episode 8
+
+const scenario = {
+  murderer: 'Mrs. Peacock',
+  room: 'Conservatory',
+  weapon: 'Lead Pipe'
+};
+
+const changeScenario = function() {
+  scenario.murderer = 'Mrs. Peacock';
+  scenario.room = 'Dining Room';
+
+  const plotTwist = function(room) {
+    if (scenario.room === room) {
+      scenario.murderer = 'Colonel Mustard';
+    }
+
+    const unexpectedOutcome = function(murderer) {
+      if (scenario.murderer === murderer) {
+        scenario.weapon = 'Candle Stick';
+      }
+    }
+
+    unexpectedOutcome('Colonel Mustard');
+  }
+
+  plotTwist('Dining Room');
+}
+
+const declareWeapon = function() {
+  return `The weapon is ${scenario.weapon}.`
+}
+
+changeScenario();
+const verdict = declareWeapon();
+console.log(verdict);
+
 // // Episode 9
 //
 // let murderer = 'Professor Plum';
