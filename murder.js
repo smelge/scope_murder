@@ -145,7 +145,7 @@
 // console.log(verdict);
 
 // Result is: Mr Green
-// Professor Plum is the original murderer. changeMurderer switches it to Mr Green, but the plotTwist changes it to Colonel Mustard, which activates the unexpectedOutcome, giving Miss Scarlet. This doesn't matter, because Mr Green was set as a constant, so cannot be changed.
+// Professor Plum is the original murderer. changeMurderer switches it to Mr Green, but the plotTwist changes it to Colonel Mustard, which activates the unexpectedOutcome, giving Miss Scarlet. This doesn't matter, because the LET in plotTwist can't be used outside its brackets, so it reverts back to Green.
 
 // Episode 8
 //
@@ -189,18 +189,18 @@
 
 // Episode 9
 
-let murderer = 'Professor Plum';
-
-if (murderer === 'Professor Plum') {
-  let murderer = 'Mrs. Peacock';
-}
-
-const declareMurderer = function() {
-  return `The murderer is ${murderer}.`;
-}
-
-const verdict = declareMurderer();
-console.log(verdict);
+// let murderer = 'Professor Plum';
+//
+// if (murderer === 'Professor Plum') {
+//   let murderer = 'Mrs. Peacock';
+// }
+//
+// const declareMurderer = function() {
+//   return `The murderer is ${murderer}.`;
+// }
+//
+// const verdict = declareMurderer();
+// console.log(verdict);
 
 // The verdict is: Professor Plum.
-// Professor Plum is set as the murderer. This would then change to Mrs Peacock if it was Plum, but the let in the IF statement does not update murderer.
+// Professor Plum is set as the murderer. This would then change to Mrs Peacock if it was Plum, but the let in the IF statement does not allow the change to leave the If statement.
