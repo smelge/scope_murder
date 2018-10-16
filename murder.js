@@ -113,6 +113,9 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 
+// Result is: Mrs White.
+// Colonel Mustard starts as the murderer, but is changed to Mr Green. However the plottwist changes it to Mrs White who is then declared the murderer.
+
 // // Episode 7
 //
 // let murderer = 'Professor Plum';
