@@ -202,5 +202,5 @@ const declareMurderer = function() {
 const verdict = declareMurderer();
 console.log(verdict);
 
-// The verdict is:
-// Professor Plum is set as the murderer. This then changes to Mrs Peacock if it was Plum. This is apparently wrong and I don't know why the if statement fails.
+// The verdict is: Professor Plum.
+// Professor Plum is set as the murderer. This would then change to Mrs Peacock if it was Plum, but the let in the IF statement does not update murderer.
